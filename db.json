@@ -1,0 +1,10 @@
+{
+    "poruke": [
+      {
+        "id": 1,
+        "ImePrezime": "Sanela Dekanić",
+        "Email": "sdekanic@pmfst.hr",
+        "vazno": true
+      }
+    ]
+}
