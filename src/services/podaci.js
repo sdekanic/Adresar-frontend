@@ -4,7 +4,7 @@ const osnovniUrl = '/api/podaci'
 const dohvatiSve = () => {
     return axios.get(osnovniUrl);
 }
-
+ 
 const stvori = noviObjekt => {
     return axios.post(osnovniUrl, noviObjekt)
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Adresar = ({osoba, brisanje}) => {
+const Podatak = ({osoba, brisanje}) => {
     
     return (
-        <li className="osoba">
+        <li className="podaci">
             {osoba.ImePrezime+" "}
             {osoba.Email}
             <button onClick = {brisanje}>Briši</button>
@@ -11,4 +11,4 @@ const Adresar = ({osoba, brisanje}) => {
     )
 }
 
-export default Adresar
+export default Podatak

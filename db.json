@@ -1,10 +1,10 @@
 {
-    "podaci": [
-      {
-        "id": 1,
-        "ImePrezime": "Sanela Dekanić",
-        "Email": "sdekanic@pmfst.hr",
-        "vazno": true
-      }
-    ]
+  "podaci": [
+    {
+      "id": 1,
+      "ImePrezime": "Sanela Dekanić",
+      "Email": "sdekanic@pmfst.hr",
+      "vazno": true
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Adresar from './components/Adresar'
-import adresarServer from './services/adresar'
+import Podatak from './components/Podatak'
+import podaciServer from './services/podaci'
 
 const App = (props) => {
   const [podaci, postaviPodatke] = useState([])
@@ -13,7 +13,7 @@ const App = (props) => {
 
   useEffect( () => {
       console.log("Effect hook");
-      adresarServer
+      podaciServer
       .dohvatiSve()
       .then( (response) => {
           console.log("Podaci učitani");
@@ -33,7 +33,7 @@ const App = (props) => {
         Email: unosAdrese
     }
     if(!flag){
-      adresarServer
+      podaciServer
       .stvori(noviObjekt)
       .then( (response) => {
         postaviPodatke(podaci.concat(response.data))
@@ -48,7 +48,7 @@ const App = (props) => {
       ImePrezime:unosImena,
       Email:unosAdrese
     }
-    adresarServer.osvjezi(Id, nova).then((response) => {
+    podaciServer.osvjezi(Id, nova).then((response) => {
       console.log(response);
       postaviPodatke(podaci.map(p=> p.id !== Id ? p : response.data))
       postaviIme('')
@@ -82,7 +82,7 @@ const App = (props) => {
   }
 
   const brisanje = (id) => {
-    adresarServer
+    podaciServer
       .brisi(id)
       .then(response => {
         console.log(response);
@@ -100,7 +100,7 @@ return (
       </div> 
       <ul>
         {podaciZaIspis.map(p =>
-          <Adresar 
+          <Podatak 
             key={p.id} 
             osoba={p} 
             brisanje = {() => brisanje(p.id)}
